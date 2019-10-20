@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".move_details.SingleMovie">
+    tools:context=".ui.move_details.SingleMovie">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,15 +14,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
         <ProgressBar
             android:id="@+id/loader_id"
-            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
             />
 
         <TextView
@@ -30,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:visibility="gone"
             android:text="Network Error" />
 
     </LinearLayout>
@@ -38,6 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/scrollView"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <LinearLayout
@@ -48,7 +49,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:scaleType="fitCenter"
+                android:scaleType="matrix"
                 android:id="@+id/movie_poster"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_movie_black_24dp"
@@ -126,6 +127,7 @@
                 android:layout_marginLeft="16dp"
                 android:textSize="18sp"
                 android:id="@+id/movie_overview"
+                android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp" />
         </LinearLayout>
 
