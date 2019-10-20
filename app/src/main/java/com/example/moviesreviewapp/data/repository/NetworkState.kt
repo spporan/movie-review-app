@@ -13,5 +13,6 @@ class NetworkState (val staus:Status,val msg:String)
         val LOADED:NetworkState = NetworkState(Status.SUCCESS,"Success")
         val LOADING:NetworkState = NetworkState(Status.RUNNING,"Running")
         val ERROR:NetworkState = NetworkState(Status.FAILED,"Error")
+        val ENDOFLIST:NetworkState = NetworkState(Status.FAILED,"Reached End Of the page")
     }
 }
