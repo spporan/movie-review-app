@@ -11,7 +11,7 @@ class SingleMovieViewModel (private val movieDetailsRepository: MovieDetailsRepo
     private val compositeDisposable=CompositeDisposable()
 
     val movieDetails:LiveData<MovieDetails> by lazy{
-        movieDetailsRepository.fetchingSignleMovieDetails(compositeDisposable,movie_id)
+        movieDetailsRepository.fetchingSingleMovieDetails(compositeDisposable,movie_id)
 
     }
     val networkState:LiveData<NetworkState> by lazy {

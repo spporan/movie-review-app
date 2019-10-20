@@ -4,11 +4,12 @@ import androidx.lifecycle.LiveData
 import com.example.moviesreviewapp.data.api.MovieApiInterface
 import com.example.moviesreviewapp.data.vo.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.internal.disposables.ArrayCompositeDisposable
+
 
 class MovieDetailsRepository(private val ApiInterface:MovieApiInterface) {
+
     lateinit var movieDetailsNetworkDataSource: MovieDetailsNetworkDataSource
-    fun fetchingSignleMovieDetails(compositeDisposable: CompositeDisposable,movie_id:Int):LiveData<MovieDetails>{
+    fun fetchingSingleMovieDetails(compositeDisposable: CompositeDisposable, movie_id:Int):LiveData<MovieDetails>{
         movieDetailsNetworkDataSource= MovieDetailsNetworkDataSource(ApiInterface,compositeDisposable )
         movieDetailsNetworkDataSource.getMovieData(movie_id)
 
