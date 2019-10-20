@@ -28,7 +28,7 @@ class SingleMovie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
-        val movieId=475557
+        val movieId=intent.getIntExtra("id",0)
         val apiService:MovieApiInterface=MovieClient.getClient()
         repository= MovieDetailsRepository(apiService)
         viewModel=getViewModel(movieId)

@@ -33,11 +33,11 @@
             app:layout_constraintTop_toBottomOf="@+id/popular_movie_poster" />
 
         <TextView
-            android:id="@+id/movie_sub"
+            android:id="@+id/popular_release"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Sub title:"
+            android:text="Releaase"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/popular_movie_name" />
